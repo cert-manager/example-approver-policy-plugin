@@ -1,0 +1,25 @@
+apiVersion: v2
+
+name: example-approver-policy-plugin
+type: application
+description: A Helm chart for the example-approver-policy-plugin
+
+home: https://github.com/cert-manager/example-approver-policy-plugin
+maintainers:
+- name: cert-manager-dev
+  email: cert-manager-dev@googlegroups.com
+  url: https://cert-manager.io
+
+sources:
+- https://github.com/cert-manager/approver-policy
+- https://github.com/cert-manager/example-approver-policy-plugin
+
+dependencies:
+- name: cert-manager-approver-policy
+  version: 0.6.3
+  repository: https://charts.jetstack.io
+
+# These versions should be overridden when packaging the chart with the
+# `--version` and `--app-version` flag.
+appVersion: v0.0.0
+version: v0.0.0

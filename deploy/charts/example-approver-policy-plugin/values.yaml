@@ -1,0 +1,13 @@
+app:
+  rbac:
+    namespaced: []
+    cluster: []
+# -- cert-manager-approver-policy dependency options.
+cert-manager-approver-policy:
+  image:
+    repository: my-org/cert-manager-example-approver-policy-plugin 
+    tag: v0.0.0
+  app:
+    extraArgs:
+    - --log-level=5
+    # - --policy-with-no-plugin-allowed=false
