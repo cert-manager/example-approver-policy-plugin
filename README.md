@@ -1,17 +1,21 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/cert-manager/cert-manager/d53c0b9270f8cd90d908460d69502694e1838f5f/logo/logo-small.png" height="256" width="256" alt="cert-manager project logo" />
+</p>
+
 # example-approver-policy-plugin
 
 This repo contains an example [cert-manager/approver-policy plugin](https://cert-manager.io/docs/projects/approver-policy/#plugins).
 
 
-> :warning:  This is plugin is not meant to be actually used and does not contain a best practices production ready code.
+> :warning:  This is plugin is not meant to actually be used. This repo does not contain best-practices, production ready code.
 
 ## Implementing a custom approver plugin
 
-[cert-manager/approver-policy](https://cert-manager.io/docs/projects/approver-policy/) can be extended via a plugin mechanism where a custom plugin can be written with custom logic for evaluating `CertificateRequest`s and `CertificateRequestPolicy`s. This can then be registered with the core cert-manager/approver-policy (in Go code) and a single image can be built that will have both the core approver and the custom plugin.
+[cert-manager/approver-policy](https://cert-manager.io/docs/projects/approver-policy/) can be extended via a plugin mechanism where a custom plugin can be written with specific logic for evaluating `CertificateRequest`s and `CertificateRequestPolicy`s. This can then be registered with the core cert-manager/approver-policy (in Go code) and a single image can be built that will have both the core approver and the custom plugin.
 
-To get started with writing an approver plugin you can clone this repo and change the logic in the  methods of the example plugin to do what you want it to do, add tests and the desired packaging mechanism.
+To get started with writing an approver plugin you can clone this repo and change the logic in the methods of the example plugin to do what you want it to do, add tests and the desired packaging mechanism.
 
-The general flow when writing an example plugin (that this sample implementation follows):
+The approximate flow when writing an example plugin (that this sample implementation follows):
 
 - implement the [`cert-manager/approver-policy.Interface`](https://github.com/cert-manager/approver-policy/blob/v0.6.3/pkg/approver/approver.go#L27-L53). This should contain all the logic of the new plugin for evaluating `CertificateRequest`s and `CertificateRequestPolicy`s.
 

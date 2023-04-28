@@ -102,4 +102,4 @@ spec:
   plugins:
     example-approver-policy-plugin:
       values:
-        day: "2" # Tuesday (0 - Sunday, 1 - Monday etc) 
+        day: "2" # Tuesday (0 - Sunday, 1 - Monday etc)
