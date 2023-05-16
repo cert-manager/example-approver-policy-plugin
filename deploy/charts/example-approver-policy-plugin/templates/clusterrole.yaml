@@ -1,0 +1,19 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  labels:
+{{ include "example-approver-policy-plugin.labels" $ | indent 4 }}
+  name: {{ include "example-approver-policy-plugin.name" $ }}
+rules:
+{{- range .Values.app.rbac.cluster }}
+- apiGroups: ["{{ .apiGroup }}"]
+  resources: ["{{ .resource }}"]
+  verbs: ["list", "watch"]
+{{- end  }}
+{{- range .Values.app.rbac.namespaced }}
+{{- if (eq .namespace "") }}
+- apiGroups: ["{{ .apiGroup }}"]
+  resources: ["{{ .resource }}"]
+  verbs: ["list", "watch"]
+{{- end  }}
+{{- end  }}

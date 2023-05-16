@@ -1,0 +1,16 @@
+{{- range .Values.app.rbac.namespaced }}
+{{- if not (eq .namespace "") }}
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: {{ include "example-approver-policy-plugin.name" $ }}:{{ .apiGroup | replace "." "-" }}-{{ .resource }}
+  namespace: {{ .namespace }}
+  labels:
+{{ include "example-approver-policy-plugin.labels" $ | indent 4 }}
+rules:
+- apiGroups: ["{{ .apiGroup }}"]
+  resources: ["{{ .resource }}"]
+  verbs: ["list", "watch"]
+{{- end }}
+---
+{{- end }}
