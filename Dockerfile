@@ -12,7 +12,7 @@ COPY main.go main.go
 # Build
 RUN go build -o cert-manager-example-approver-policy-plugin main.go
 
-FROM gcr.io/distroless/base@sha256:347a41e7f263ea7f7aba1735e5e5b1439d9e41a9f09179229f8c13ea98ae94cf
+FROM gcr.io/distroless/base@sha256:8c8b7cf2a01e2d1c683128b2488d77139fa90ec8cb807f0ae260d57f7022dedd
 LABEL description="example cert-manager approver-policy plugin"
 
 WORKDIR /
