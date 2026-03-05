@@ -8,7 +8,7 @@ require (
 	github.com/go-logr/logr v1.4.3
 	github.com/spf13/pflag v1.0.10
 	k8s.io/apimachinery v0.35.2
-	sigs.k8s.io/controller-runtime v0.23.2
+	sigs.k8s.io/controller-runtime v0.23.3
 )
 
 require (
