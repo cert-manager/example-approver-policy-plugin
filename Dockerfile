@@ -1,5 +1,5 @@
 # Build the approver-policy binary
-FROM docker.io/library/golang:1.26@sha256:9edf71320ef8a791c4c33ec79f90496d641f306a91fb112d3d060d5c1cee4e20 as builder
+FROM docker.io/library/golang:1.26@sha256:c7e98cc0fd4dfb71ee7465fee6c9a5f079163307e4bf141b336bb9dae00159a5 as builder
 
 WORKDIR /workspace
 # Copy the Go Modules manifests
