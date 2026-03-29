@@ -3,7 +3,7 @@ module example-approver-policy-plugin
 go 1.25.0
 
 require (
-	github.com/cert-manager/approver-policy v0.24.0
+	github.com/cert-manager/approver-policy v0.25.0-alpha.0
 	github.com/cert-manager/cert-manager v1.20.1
 	github.com/go-logr/logr v1.4.3
 	github.com/spf13/pflag v1.0.10
@@ -89,7 +89,7 @@ require (
 	k8s.io/api v0.35.2 // indirect
 	k8s.io/apiextensions-apiserver v0.35.2 // indirect
 	k8s.io/apiserver v0.35.2 // indirect
-	k8s.io/cli-runtime v0.35.1 // indirect
+	k8s.io/cli-runtime v0.35.2 // indirect
 	k8s.io/client-go v0.35.2 // indirect
 	k8s.io/component-base v0.35.2 // indirect
 	k8s.io/klog/v2 v2.140.0 // indirect
