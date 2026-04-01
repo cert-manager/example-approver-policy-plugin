@@ -3,7 +3,7 @@ module example-approver-policy-plugin
 go 1.25.0
 
 require (
-	github.com/cert-manager/approver-policy v0.25.0-alpha.0
+	github.com/cert-manager/approver-policy v0.25.0-alpha.1
 	github.com/cert-manager/cert-manager v1.20.1
 	github.com/go-logr/logr v1.4.3
 	github.com/spf13/pflag v1.0.10
