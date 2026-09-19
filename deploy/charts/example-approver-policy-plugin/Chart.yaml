@@ -16,7 +16,7 @@ sources:
 
 dependencies:
 - name: cert-manager-approver-policy
-  version: v0.27.0
+  version: v0.28.0
   repository: https://charts.jetstack.io
 
 # These versions should be overridden when packaging the chart with the
