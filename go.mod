@@ -7,7 +7,7 @@ require (
 	github.com/cert-manager/cert-manager v1.21.3
 	github.com/go-logr/logr v1.4.4
 	github.com/spf13/pflag v1.1.0
-	k8s.io/apimachinery v0.37.2
+	k8s.io/apimachinery v0.37.3
 	sigs.k8s.io/controller-runtime v0.25.3
 )
 
